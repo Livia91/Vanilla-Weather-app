@@ -5,14 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Weather App</title>
 </head>
 
 <body>
-    <h1>
-        hello
-    </h1>
+    <div class="container">
+        <h1>
+            Harrow, United Kingdom
+        </h1>
+        <ul>
+            <li>
+                Monday 17:20
+            </li>
+            <li>
+                Cloudy
+            </li>
+        </ul>
+        <div class="row">
+            <div class="col-6">
+                <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Cloudy">
+                27℃ | ℉
+            </div>
+            <div class="col-6">
+                <ul>
+                    <li>
+                        Precipitaion:10%
+                    </li>
+                    <li>
+                        Humidity:42%
+                    </li>
+                    <li>
+                        Wind:8 mph
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <small>
+            <a href="https://github.com/Livia91/Vanilla-Weather-app">Open-source</a>, by Livia Pogar
+        </small>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
