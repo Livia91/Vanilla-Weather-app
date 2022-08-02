@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="weather-app-wrapper">
+            <div class="weather-app">
+                <div class="overview">
+                    <h1 id="city">
+                        Harrow, United Kingdom
+                    </h1>
+                    <ul>
+                        <li>
+                            Monday 17:20
+                        </li>
+                        <li id="description">
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="clearfix weather-temp">
+                            <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Cloudy"
+                                class="float-left" />
+                            <div class="float-left">
+                                <strong id="temperature"></strong><span class="units">℃ | <a href="#">℉</a> </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li>
+                                Humidity: <span id="humidity"></span>
+                            </li>
+                            <li>
+                                Wind:8 mph
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <small>
+                <a href="https://github.com/Livia91/Vanilla-Weather-app" target="_blank">Open-source</a>, by Livia Pogar
+            </small>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
