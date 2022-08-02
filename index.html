@@ -17,15 +17,14 @@
         <div class="weather-app-wrapper">
             <div class="weather-app">
                 <div class="overview">
-                    <h1>
+                    <h1 id="city">
                         Harrow, United Kingdom
                     </h1>
                     <ul>
                         <li>
                             Monday 17:20
                         </li>
-                        <li>
-                            Cloudy
+                        <li id="description">
                         </li>
                     </ul>
                 </div>
@@ -35,17 +34,14 @@
                             <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Cloudy"
                                 class="float-left" />
                             <div class="float-left">
-                                <strong>27</strong><span class="units">℃ | <a href="#">℉</a> </span>
+                                <strong id="temperature"></strong><span class="units">℃ | <a href="#">℉</a> </span>
                             </div>
                         </div>
                     </div>
                     <div class="col-6">
                         <ul>
                             <li>
-                                Precipitaion:10%
-                            </li>
-                            <li>
-                                Humidity:42%
+                                Humidity: <span id="humidity"></span>
                             </li>
                             <li>
                                 Wind:8 mph
