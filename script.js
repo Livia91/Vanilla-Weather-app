@@ -35,7 +35,7 @@ function displayTemperature (response) {
  temperatureElement.innerHTML = Math.round (response.data.main.temp);
  cityElement.innerHTML = response.data.name;
  descriptionElement.innerHTML = response.data.weather[0].description;
- humidityElement.innerHTML = response.data.main.humitidy;
+ humidityElement.innerHTML = response.data.main.humididy;
  windElement.innerHTML = Math.round (response.data.wind.speed);
  dateElement.innerHTML = formateDate(response.data.dt);
 }
