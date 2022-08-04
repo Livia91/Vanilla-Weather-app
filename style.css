@@ -34,7 +34,7 @@ margin: 20px auto;
 .weather-app {
     
     padding: 20px;
-    border: 1px solid #dadde1;
+    border: 1px solid #636262;
     border-radius: 10px;
 }
 
@@ -43,9 +43,9 @@ margin: 20px auto;
 }
 
 .weather-temp img {
-margin-right: 20px;
-height: 64px;
-width: 64px;
+margin-right: 15px;
+height: 70px;
+width: 70px;
 }
 .weather-temp strong {
     color: rbg(33, 33, 33);
