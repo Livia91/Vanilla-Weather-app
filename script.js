@@ -46,9 +46,21 @@ function displayTemperature (response) {
  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-
+function search(city) {
 let apiKey = "bfe99896cbfe0c5d96be05f646b9fa10";
-let city = "Harrow";
 let urlApi = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
 axios.get(urlApi).then(displayTemperature);
+}
+
+
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("Harrow");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
