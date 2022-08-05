@@ -60,4 +60,7 @@ width: 70px;
   top: -34px;
 }
 
-
+.weather-temperature .active {
+    color: black;
+    cursor: default;
+}
