@@ -64,3 +64,7 @@ width: 70px;
     color: black;
     cursor: default;
 }
+
+.weather-temperature .active:hover {
+    text-decoration: none;
+}
