@@ -24,7 +24,7 @@ li {
     line-height: 19px;
 }
 
-li::first-letter {
+li:first-letter {
 text-transform: capitalize;
 }
 
