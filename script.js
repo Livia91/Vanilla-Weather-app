@@ -23,7 +23,29 @@ if (minutes < 10) {
 }
 
 
+function dispalyForecast() {
+  let forecastElement = document.querySelector("#forecast");
 
+ let forecastHTML = `<div class="row">`;
+ let days = [ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", ];
+ days.forEach(function(day) {
+ forecastHTML = forecastHTML +  `
+      <div class="col-2">
+        <div class="weather-forecast-date">${day}</div>
+        <img
+          src="https://openweathermap.org/img/wn/01d@2x.png"
+          alt=""
+          width="36" />
+          <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> 27° </span>
+          <span class="weather-forecast-temperature-min"> 15° </span>
+        </div>
+      </div>`;
+ });
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
 
 
 function displayTemperature (response) { 
@@ -34,6 +56,8 @@ function displayTemperature (response) {
     let windElement = document.querySelector("#wind");
     let dateElement = document.querySelector("#date");
     let iconElement = document.querySelector("#icon");
+
+
 
 celsiusTemperature = response.data.main.temp;
 
@@ -61,7 +85,6 @@ function handleSubmit(event) {
 }
 
 
-
 function displayFahrenheitTemperature(event) {
  event.preventDefault(); 
  let temperatureElement = document.querySelector("#temperature");
@@ -79,6 +102,8 @@ let temperatureElement = document.querySelector("#temperature");
 temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
+
+
 let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
@@ -90,4 +115,8 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
+dispalyForecast();
+
 search("Harrow");
+
+
