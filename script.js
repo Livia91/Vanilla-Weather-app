@@ -23,7 +23,8 @@ if (minutes < 10) {
 }
 
 
-function dispalyForecast() {
+function dispalyForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
  let forecastHTML = `<div class="row">`;
@@ -46,10 +47,16 @@ function dispalyForecast() {
 
   forecastElement.innerHTML = forecastHTML;
 }
+function getForcast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "bfe99896cbfe0c5d96be05f646b9fa10";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(dispalyForecast);
+}
 
 
 function displayTemperature (response) { 
-    console.log(response.data);
+    
    let temperatureElement = document.querySelector("#temperature");
    let cityElement = document.querySelector("#city");
    let descriptionElement = document.querySelector("#description");
@@ -68,7 +75,10 @@ celsiusTemperature = response.data.main.temp;
  dateElement.innerHTML = formateDate(response.data.dt);
  iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
  iconElement.setAttribute("alt", response.data.weather[0].description);
+
+ getForcast(response.data.coord);
 }
+
 
 function search(city) {
 let apiKey = "bfe99896cbfe0c5d96be05f646b9fa10";
@@ -115,7 +125,7 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-dispalyForecast();
+
 
 search("Harrow");
 
