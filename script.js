@@ -24,22 +24,22 @@ if (minutes < 10) {
 
 
 function dispalyForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
+  
   let forecastElement = document.querySelector("#forecast");
 
  let forecastHTML = `<div class="row">`;
- let days = [ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", ];
- days.forEach(function(day) {
+ forecast.forEach(function(forecastDay) {
  forecastHTML = forecastHTML +  `
       <div class="col-2">
-        <div class="weather-forecast-date">${day}</div>
+        <div class="weather-forecast-date">${forecastDay.dt}</div>
         <img
-          src="https://openweathermap.org/img/wn/01d@2x.png"
+          src="https://openweathermap.org/img/wn/${forecastDay.weather[o].icon}@2x.png"
           alt=""
           width="36" />
           <div class="weather-forecast-temperatures">
-          <span class="weather-forecast-temperature-max"> 27° </span>
-          <span class="weather-forecast-temperature-min"> 15° </span>
+          <span class="weather-forecast-temperature-max"> ${forecastDay.temp.max}° </span>
+          <span class="weather-forecast-temperature-min"> ${forecastDay.temp.min}° </span>
         </div>
       </div>`;
  });
