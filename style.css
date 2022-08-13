@@ -82,4 +82,5 @@ width: 70px;
 
  .weather-forecast-temp-min {
     color: #636262;
+    opacity: 0.5;
  }
